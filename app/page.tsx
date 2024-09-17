@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Star, ChevronDown, ChevronUp, Loader2, Users, ArrowUpDown } from 'lucide-react'
+import { Star, Users, ArrowUpDown } from 'lucide-react'
 
 type Drainer = {
   name: string
@@ -42,7 +42,6 @@ export default function Component() {
   const [sortedDrainers, setSortedDrainers] = useState<Drainer[]>([])
   const [groupchatSortOrder, setGroupchatSortOrder] = useState<'asc' | 'desc'>('desc')
   const [sortedGroupchats, setSortedGroupchats] = useState<Groupchat[]>([])
-  const [isLoading, setIsLoading] = useState(true)
   const [activeSection, setActiveSection] = useState<'drainers' | 'groupchats'>('drainers')
 
   useEffect(() => {
